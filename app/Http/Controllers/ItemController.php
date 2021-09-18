@@ -69,7 +69,6 @@ class ItemController extends Controller
     {
         $item = Item::find($id);
         $item->delete();
-
         return redirect('/items');
     }
 }
