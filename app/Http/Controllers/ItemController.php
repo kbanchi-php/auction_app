@@ -38,4 +38,37 @@ class ItemController extends Controller
 
         return redirect('/items');
     }
+
+    public function edit($id)
+    {
+        $item = Item::find($id);
+        $data = [
+            'item' => $item,
+        ];
+        return view('items.edit', $data);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $item = Item::find($id);
+
+        $item->name = $request->name;
+        $item->description = $request->description;
+        $item->price = $request->price;
+        $item->seller = $request->seller;
+        $item->email = $request->email;
+        $item->image_url = $request->image_url;
+
+        $item->save();
+
+        return redirect('/items');
+    }
+
+    public function destroy($id)
+    {
+        $item = Item::find($id);
+        $item->delete();
+
+        return redirect('/items');
+    }
 }
