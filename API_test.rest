@@ -1,11 +1,11 @@
 ### index
 GET /api/items HTTP/1.1
-Host: localhost
+Host: auction-app-kbanchi1111.herokuapp.com
 Accept: application/json
 
 ### store
 POST /api/items
-Host: localhost
+Host: auction-app-kbanchi1111.herokuapp.com
 Accept: application/json
 content-type: application/json
 
@@ -20,12 +20,12 @@ content-type: application/json
 
 ### show
 GET /api/items/1 HTTP/1.1
-Host: localhost
+Host: auction-app-kbanchi1111.herokuapp.com
 Accept: application/json
 
 ### update
 PATCH /api/items/1
-Host: localhost
+Host: auction-app-kbanchi1111.herokuapp.com
 Accept: application/json
 content-type: application/json
 
@@ -40,5 +40,5 @@ content-type: application/json
 
 ### destroy
 DELETE /api/items/2 HTTP/1.1
-Host: localhost
+Host: auction-app-kbanchi1111.herokuapp.com
 Accept: application/json
